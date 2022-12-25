@@ -29,7 +29,7 @@ public class Field {
         return field.entrySet().stream()
                 .filter(e -> e.getValue() == Sign.EMPTY)
                 .map(Map.Entry::getKey)
-                .findFirst().orElse(-1);
+                .findAny().orElse(-1);
     }
 
     public List<Sign> getFieldData() {
